@@ -8,12 +8,11 @@
 import UIKit
 
 class detailViewController: UIViewController {
-    
-    @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var photoImageView: UIImageView!
-    @IBOutlet weak var itemFieldName: UITextField!
+
     @IBOutlet weak var quantityField: UILabel!
-    
+    @IBOutlet weak var dateField: UILabel!
+    @IBOutlet weak var itemFieldName: UILabel!
+    @IBOutlet weak var photoImageView: UIImageView!
     var quan : Int16 = 0;
     var foodItem : FoodItem?
     
@@ -21,8 +20,7 @@ class detailViewController: UIViewController {
         super.viewDidLoad()
         
         title = foodItem?.name
-        itemFieldName.text = foodItem?.name       
-        self.datePicker.date = (foodItem?.date)!
+        itemFieldName.text = foodItem?.name
         quan = foodItem?.quantity ?? 0
         quantityField.text = String(quan)
         
@@ -30,7 +28,14 @@ class detailViewController: UIViewController {
             photoImageView.image = UIImage(data: imageData)
         }
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
     /*
+     
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation

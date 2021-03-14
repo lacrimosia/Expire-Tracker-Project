@@ -14,6 +14,7 @@ class CreateNewItemViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var plusMinusButton: UIStepper!
     
+    @IBOutlet weak var quantityTextField: UILabel!
     var quantityValue : Int16 = 0
     
     var pickerController = UIImagePickerController()
@@ -22,10 +23,6 @@ class CreateNewItemViewController: UIViewController, UIImagePickerControllerDele
         super.viewDidLoad()
 
         pickerController.delegate = self
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-      
     }
     /*
     // MARK: - Navigation
@@ -60,7 +57,9 @@ class CreateNewItemViewController: UIViewController, UIImagePickerControllerDele
         present(pickerController, animated: true, completion: nil)
     }
     
-    @IBAction func updateQuantity(_ sender: Any) {
+    @IBAction func updateQuantity(_ sender: UIStepper) {
+        quantityValue = Int16(sender.value)
+        quantityTextField.text = String(quantityValue)
     }
 
     // save new items to core data
