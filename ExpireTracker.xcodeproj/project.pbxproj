@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		6C35E3B725FD58AE00005655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35E3B625FD58AE00005655 /* AppDelegate.swift */; };
 		6C35E3B925FD58AE00005655 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35E3B825FD58AE00005655 /* SceneDelegate.swift */; };
-		6C35E3BB25FD58AE00005655 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35E3BA25FD58AE00005655 /* ViewController.swift */; };
 		6C35E3BE25FD58AE00005655 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C35E3BC25FD58AE00005655 /* Main.storyboard */; };
 		6C35E3C125FD58AE00005655 /* ExpireTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6C35E3BF25FD58AE00005655 /* ExpireTracker.xcdatamodeld */; };
 		6C35E3C325FD58AF00005655 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C35E3C225FD58AF00005655 /* Assets.xcassets */; };
 		6C35E3C625FD58AF00005655 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C35E3C425FD58AF00005655 /* LaunchScreen.storyboard */; };
+		6C35E3D925FD611300005655 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35E3D825FD611300005655 /* CategoryTableViewController.swift */; };
+		6C35E3E125FD98B100005655 /* CreateNewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35E3E025FD98B100005655 /* CreateNewItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6C35E3B325FD58AE00005655 /* ExpireTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpireTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C35E3B625FD58AE00005655 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C35E3B825FD58AE00005655 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6C35E3BA25FD58AE00005655 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6C35E3BD25FD58AE00005655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C35E3C025FD58AE00005655 /* ExpireTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExpireTracker.xcdatamodel; sourceTree = "<group>"; };
 		6C35E3C225FD58AF00005655 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C35E3C525FD58AF00005655 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C35E3C725FD58AF00005655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C35E3D825FD611300005655 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		6C35E3E025FD98B100005655 /* CreateNewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,9 @@
 			children = (
 				6C35E3B625FD58AE00005655 /* AppDelegate.swift */,
 				6C35E3B825FD58AE00005655 /* SceneDelegate.swift */,
-				6C35E3BA25FD58AE00005655 /* ViewController.swift */,
 				6C35E3BC25FD58AE00005655 /* Main.storyboard */,
+				6C35E3D825FD611300005655 /* CategoryTableViewController.swift */,
+				6C35E3E025FD98B100005655 /* CreateNewItemViewController.swift */,
 				6C35E3C225FD58AF00005655 /* Assets.xcassets */,
 				6C35E3C425FD58AF00005655 /* LaunchScreen.storyboard */,
 				6C35E3C725FD58AF00005655 /* Info.plist */,
@@ -140,10 +143,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C35E3BB25FD58AE00005655 /* ViewController.swift in Sources */,
 				6C35E3B725FD58AE00005655 /* AppDelegate.swift in Sources */,
 				6C35E3B925FD58AE00005655 /* SceneDelegate.swift in Sources */,
+				6C35E3E125FD98B100005655 /* CreateNewItemViewController.swift in Sources */,
 				6C35E3C125FD58AE00005655 /* ExpireTracker.xcdatamodeld in Sources */,
+				6C35E3D925FD611300005655 /* CategoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.depaul.edu.csc471.ExpireTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.depaul.edu.csc471.ExpireTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
