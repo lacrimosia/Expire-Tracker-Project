@@ -14,10 +14,25 @@ class NotifyUsersViewController: UIViewController {
     
     // get the data from the current items
     var updates: [FoodItem] = []
-    var notif : [Notify] = []
+    var notif: [Notify] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if(notif.isEmpty){
+            print("yes this is empty")
+            if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+                let initalSetup = Notify(context: context)
+                initalSetup.notifyEnabled = false
+                notif.append(initalSetup)
+                enableSwitchButton.isOn = initalSetup.notifyEnabled
+               (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+            }
+        }else{
+            print("not empty \(notif)")
+        }
+        
+        
         getCoreDataInfo()
     }
     
@@ -45,10 +60,21 @@ class NotifyUsersViewController: UIViewController {
             
         }
         
-        // enable notifications
         // fetch to see if core data notify enabled
         let isNotifEnabled = notif[0].notifyEnabled
-        print(isNotifEnabled)
+        
+        // enable notifications
+        if(isNotifEnabled){
+            print("enabled button")
+            // enable permission for notifications
+            let center = UNUserNotificationCenter.current()
+            center.requestAuthorization(options: [.badge, .sound, .alert, .carPlay,.announcement]) { (granted, error) in
+                if error == nil{
+                    print("User permission is granted for notifications - \(granted)")
+                }
+            }
+        }
+        
     }
     /*
      // MARK: - Navigation
