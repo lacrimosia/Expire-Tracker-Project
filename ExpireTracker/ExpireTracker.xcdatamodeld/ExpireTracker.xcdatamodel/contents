@@ -6,7 +6,11 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
+    <entity name="Notify" representedClassName="Notify" syncable="YES" codeGenerationType="class">
+        <attribute name="notifyEnabled" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+    </entity>
     <elements>
         <element name="FoodItem" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="Notify" positionX="-54" positionY="18" width="128" height="44"/>
     </elements>
 </model>
