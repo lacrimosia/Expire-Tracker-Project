@@ -15,6 +15,7 @@
 		6C35E3C625FD58AF00005655 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C35E3C425FD58AF00005655 /* LaunchScreen.storyboard */; };
 		6C35E3D925FD611300005655 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35E3D825FD611300005655 /* CategoryTableViewController.swift */; };
 		6C35E3E125FD98B100005655 /* CreateNewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C35E3E025FD98B100005655 /* CreateNewItemViewController.swift */; };
+		6C52B32A25FDA70600D5E296 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C52B32925FDA70600D5E296 /* detailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		6C35E3C725FD58AF00005655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C35E3D825FD611300005655 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		6C35E3E025FD98B100005655 /* CreateNewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewItemViewController.swift; sourceTree = "<group>"; };
+		6C52B32925FDA70600D5E296 /* detailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				6C35E3B625FD58AE00005655 /* AppDelegate.swift */,
 				6C35E3B825FD58AE00005655 /* SceneDelegate.swift */,
 				6C35E3BC25FD58AE00005655 /* Main.storyboard */,
+				6C52B32925FDA70600D5E296 /* detailViewController.swift */,
 				6C35E3D825FD611300005655 /* CategoryTableViewController.swift */,
 				6C35E3E025FD98B100005655 /* CreateNewItemViewController.swift */,
 				6C35E3C225FD58AF00005655 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 				6C35E3E125FD98B100005655 /* CreateNewItemViewController.swift in Sources */,
 				6C35E3C125FD58AE00005655 /* ExpireTracker.xcdatamodeld in Sources */,
 				6C35E3D925FD611300005655 /* CategoryTableViewController.swift in Sources */,
+				6C52B32A25FDA70600D5E296 /* detailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

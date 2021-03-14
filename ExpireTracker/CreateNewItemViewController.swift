@@ -15,8 +15,6 @@ class CreateNewItemViewController: UIViewController, UIImagePickerControllerDele
     
     @IBOutlet weak var plusMinusButton: UIStepper!
     
-    @IBOutlet weak var notesField: UITextView!
-    
     var quantityValue : Int16 = 0
     
     var pickerController = UIImagePickerController()
@@ -70,7 +68,6 @@ class CreateNewItemViewController: UIViewController, UIImagePickerControllerDele
             item.name = itemNameField.text
             item.image = photoImageView.image?.jpegData(compressionQuality: 1.0)
             item.date = dateField.text
-            item.notes = notesField.text
             item.quantity = quantityValue
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
         }
