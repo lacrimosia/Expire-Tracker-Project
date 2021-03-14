@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="FoodItem" representedClassName="FoodItem" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>

@@ -11,8 +11,7 @@ class CreateNewItemViewController: UIViewController, UIImagePickerControllerDele
 
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var itemNameField: UITextField!
-    @IBOutlet weak var dateField: UITextField!
-    
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var plusMinusButton: UIStepper!
     
     var quantityValue : Int16 = 0
@@ -25,7 +24,9 @@ class CreateNewItemViewController: UIViewController, UIImagePickerControllerDele
         pickerController.delegate = self
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+      
+    }
     /*
     // MARK: - Navigation
 
@@ -62,12 +63,13 @@ class CreateNewItemViewController: UIViewController, UIImagePickerControllerDele
     @IBAction func updateQuantity(_ sender: Any) {
     }
 
+    // save new items to core data
     @IBAction func saveItem(_ sender: Any) {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             let item = FoodItem(context: context)
             item.name = itemNameField.text
+            item.date = datePicker.date
             item.image = photoImageView.image?.jpegData(compressionQuality: 1.0)
-            item.date = dateField.text
             item.quantity = quantityValue
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
         }

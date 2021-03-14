@@ -14,22 +14,12 @@ class CategoryTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getCoreDataInfo()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         getCoreDataInfo()
     }
-    
-    // update the table data and reloads the table view
-    func getCoreDataInfo() {
-        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-            if let coreDataFoodUpdates = try? context.fetch(FoodItem.fetchRequest()) as? [FoodItem] {
-                updates = coreDataFoodUpdates
-                tableView.reloadData()
-            }
-        }
-    }
-
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -80,12 +70,20 @@ class CategoryTableViewController: UITableViewController {
     
     // send the data to the detail view
    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let foodItem = updates[indexPath.row]
-        print(foodItem)
+        let foodItem = updates[indexPath.row] 
         performSegue(withIdentifier: "detailsView", sender: foodItem)
     }
 
-  
+    
+    // update the table data and reloads the table view
+    func getCoreDataInfo() {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            if let coreDataFoodUpdates = try? context.fetch(FoodItem.fetchRequest()) as? [FoodItem] {
+                updates = coreDataFoodUpdates
+                tableView.reloadData()
+            }
+        }
+    }
 
     /*
     // Override to support rearranging the table view.
