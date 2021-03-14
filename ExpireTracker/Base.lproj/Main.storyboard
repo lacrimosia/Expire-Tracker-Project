@@ -205,13 +205,7 @@
                             <constraint firstItem="aEn-x8-471" firstAttribute="top" secondItem="Gc8-Aq-4n1" secondAttribute="bottom" constant="24" id="w2g-Hi-HWd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ItemName" id="Is8-t0-jB9">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="YiA-79-yrX">
-                            <connections>
-                                <action selector="editCurrentValues:" destination="fkv-z5-UJh" id="GPu-1Z-xCo"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="ItemName" id="Is8-t0-jB9"/>
                     <connections>
                         <outlet property="dateField" destination="Qe0-4t-73O" id="3BX-gR-NWI"/>
                         <outlet property="itemFieldName" destination="ZEc-qn-fsL" id="ea1-ex-cz7"/>

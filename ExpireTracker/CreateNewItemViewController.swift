@@ -58,6 +58,7 @@ class CreateNewItemViewController: UIViewController, UIImagePickerControllerDele
     }
     
     @IBAction func updateQuantity(_ sender: UIStepper) {
+        sender.minimumValue = 1
         quantityValue = Int16(sender.value)
         quantityTextField.text = String(quantityValue)
     }

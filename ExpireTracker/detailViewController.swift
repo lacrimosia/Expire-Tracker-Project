@@ -24,6 +24,14 @@ class detailViewController: UIViewController {
         quan = foodItem?.quantity ?? 0
         quantityField.text = String(quan)
         
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/YY h:m a"
+        dateFormatter.locale = Locale(identifier: "en_US")
+        let foodItemDate = dateFormatter.string(from: foodItem?.date ?? currentDate)
+        
+        dateField.text = foodItemDate
+        
         if let imageData = foodItem?.image {
             photoImageView.image = UIImage(data: imageData)
         }
