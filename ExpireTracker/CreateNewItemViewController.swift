@@ -14,25 +14,16 @@ class CreateNewItemViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var plusMinusButton: UIStepper!
     
+    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var quantityTextField: UILabel!
-    var quantityValue : Int16 = 0
+    var quantityValue : Int16 = 1
     
     var pickerController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         pickerController.delegate = self
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
@@ -65,15 +56,21 @@ class CreateNewItemViewController: UIViewController, UIImagePickerControllerDele
 
     // save new items to core data
     @IBAction func saveItem(_ sender: Any) {
-        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-            let item = FoodItem(context: context)
-            item.name = itemNameField.text
-            item.date = datePicker.date
-            item.image = photoImageView.image?.jpegData(compressionQuality: 1.0)
-            item.quantity = quantityValue
-            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        if(itemNameField.text!.isEmpty){
+            let alert = UIAlertController(title: "Error", message: "Please enter a name for your item. This is required.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Try Again", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }else{
+            if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+                let item = FoodItem(context: context)
+                item.name = itemNameField.text
+                item.date = datePicker.date
+                item.image = photoImageView.image?.jpegData(compressionQuality: 1.0)
+                item.quantity = quantityValue
+                (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+            }
+            
+            navigationController?.popViewController(animated: true)
         }
-        
-        navigationController?.popViewController(animated: true)
     }
 }

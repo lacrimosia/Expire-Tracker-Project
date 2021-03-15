@@ -32,7 +32,6 @@ class CategoryTableViewController: UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "categoryItem", for: indexPath)
         
         // Configure the cell...
-        // cell.backgroundColor = .systemBackground
         // cell index
         let foodItemUpdate = updates[indexPath.row]
         
@@ -86,24 +85,19 @@ class CategoryTableViewController: UITableViewController{
                 tableView.reloadData()
                 
                 let center = UNUserNotificationCenter.current()
-                // var date = Date().addingTimeInterval(5)
                 
                 if(!coreDataFoodUpdates.isEmpty){
-                    print("not empty")
-                    // date = coreDataFoodUpdates[1].date! as Date
-                    
                     for x in coreDataFoodUpdates{
                         let listDate = x.date! as Date
-                        let nameTitle = x.name!.uppercased() as String
+                        let nameTitle = x.name!.capitalized as String
                         
                         let content = UNMutableNotificationContent()
                         content.title = "Expire Tracker"
-                        content.body = "\(nameTitle) is expiring today. Please consider throwing this item out."
+                        content.body = "🍎🍇🍔 \(nameTitle) is expiring today. Please consider throwing this item out."
                         content.sound = .default
                         
                         let fireDate = Calendar.current.dateComponents([.day, .month, .year, .hour, .minute, .second], from: listDate)
                         let trigger = UNCalendarNotificationTrigger(dateMatching: fireDate, repeats: false)
-                        //UNTimeIntervalNotificationTrigger(timeInterval: 20, repeats: false)
                         
                         let request = UNNotificationRequest(identifier: "reminder", content: content, trigger: trigger)
                         center.add(request) { (error) in
