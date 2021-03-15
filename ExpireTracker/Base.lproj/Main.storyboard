@@ -55,8 +55,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ne5-YQ-qBN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="categoryItem" textLabel="Wj5-xF-suy" imageView="mXg-c8-KyB" rowHeight="113" style="IBUITableViewCellStyleDefault" id="A2w-RS-fGZ">
                                 <rect key="frame" x="0.0" y="28" width="414" height="113"/>
@@ -69,7 +69,6 @@
                                             <rect key="frame" x="205" y="0.0" width="189" height="113"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="placeholderimage" id="mXg-c8-KyB">
@@ -78,6 +77,7 @@
                                             <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                         </imageView>
                                     </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -164,7 +164,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Cv-Bo-W6y"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ZEc-qn-fsL" firstAttribute="top" secondItem="Gc8-Aq-4n1" secondAttribute="bottom" constant="24" id="2Hi-SP-W9y"/>
                             <constraint firstItem="Gc8-Aq-4n1" firstAttribute="trailing" secondItem="2Cv-Bo-W6y" secondAttribute="trailing" id="3k8-rT-Roj"/>
@@ -226,6 +226,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: Turkey Dressing" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WNq-Mw-yQR">
                                 <rect key="frame" x="30" y="342" width="354" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -284,7 +285,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O7y-ZW-shU"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Wze-Rf-UBE" firstAttribute="top" secondItem="LUU-Ou-ivt" secondAttribute="bottom" constant="26" id="2fE-i0-HHO"/>
                             <constraint firstItem="n7C-S3-rIJ" firstAttribute="leading" secondItem="O7y-ZW-shU" secondAttribute="leading" constant="30" id="4Xd-mr-9t7"/>
