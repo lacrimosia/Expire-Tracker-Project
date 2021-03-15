@@ -15,6 +15,7 @@ class CategoryTableViewController: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = 50
         getCoreDataInfo()
     }
     

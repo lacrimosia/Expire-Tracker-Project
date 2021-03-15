@@ -58,21 +58,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="categoryItem" textLabel="Wj5-xF-suy" imageView="mXg-c8-KyB" rowHeight="113" style="IBUITableViewCellStyleDefault" id="A2w-RS-fGZ">
-                                <rect key="frame" x="0.0" y="28" width="414" height="113"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="categoryItem" textLabel="Wj5-xF-suy" imageView="mXg-c8-KyB" rowHeight="150" style="IBUITableViewCellStyleDefault" id="A2w-RS-fGZ">
+                                <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A2w-RS-fGZ" id="Fud-gt-o3u">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="113"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Category Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wj5-xF-suy">
-                                            <rect key="frame" x="205" y="0.0" width="189" height="113"/>
+                                            <rect key="frame" x="260" y="0.0" width="134" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="placeholderimage" id="mXg-c8-KyB">
-                                            <rect key="frame" x="20" y="0.0" width="170" height="113"/>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="placeholderimage" id="mXg-c8-KyB">
+                                            <rect key="frame" x="20" y="0.0" width="225" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                         </imageView>
