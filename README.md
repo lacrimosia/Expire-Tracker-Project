@@ -1,4 +1,4 @@
-# Expire-Tracker-Project
+# ExpireTracker iOS App v.1.0
 
 Author: Shatilla Prayer
 
