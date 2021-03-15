@@ -1,5 +1,7 @@
 # ExpireTracker iOS App v.1.0
 
+![Image of Logo](https://raw.githubusercontent.com/lacrimosia/Expire-Tracker-Project/main/ExpireTracker/Assets.xcassets/logo.imageset/logo.png)
+
 Author: Shatilla Prayer
 
 Expire Tracker is an app that allows users to track the expiration dates on their food items. You can store an image, name, date and time to your item. It is saved
