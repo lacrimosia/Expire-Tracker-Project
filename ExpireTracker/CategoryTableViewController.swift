@@ -16,41 +16,6 @@ class CategoryTableViewController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         getCoreDataInfo()
-        
-        // fetch to see if core data notify enabled
-        // enable notifications
-        // Assign the delegate
-        
-        // For enabled notifications
-        //        let center = UNUserNotificationCenter.current()
-        //        //center.delegate = self
-        //
-        //        // notification content
-        //        let content = UNMutableNotificationContent()
-        //        content.title = "Expire Tracker Alert"
-        //        content.body = "Your item is expiring soon..."
-        //        content.sound = UNNotificationSound.default
-        
-        // create the notification trigger
-        //let date = Date().addingTimeInterval(65)
-        // let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
-        
-        // calendar trigger
-        // let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-        // test
-        //        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        //
-        //        // create notification request
-        //        let uuid = UUID().uuidString
-        //        let request = UNNotificationRequest(identifier: uuid, content: content, trigger: trigger)
-        //        center.add(request)
-        //        center.add(request, withCompletionHandler:  {(error) in
-        //            if error != nil{
-        //                print("Error = \(error?.localizedDescription ?? "error local notification")")
-        //            }
-        //        })
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -129,10 +94,11 @@ class CategoryTableViewController: UITableViewController{
                     
                     for x in coreDataFoodUpdates{
                         let listDate = x.date! as Date
+                        let nameTitle = x.name!.uppercased() as String
                         
                         let content = UNMutableNotificationContent()
-                        content.title = "Expire Tracker notification"
-                        content.body = "\(x.name! as String) is expiring today. Please consider throwing this item out."
+                        content.title = "Expire Tracker"
+                        content.body = "\(nameTitle) is expiring today. Please consider throwing this item out."
                         content.sound = .default
                         
                         let fireDate = Calendar.current.dateComponents([.day, .month, .year, .hour, .minute, .second], from: listDate)
@@ -152,30 +118,5 @@ class CategoryTableViewController: UITableViewController{
             }
         }
     }
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
