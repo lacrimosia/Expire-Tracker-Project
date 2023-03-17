@@ -7,7 +7,7 @@
 
 import UIKit
 import UserNotifications
-import NotificationCenter;
+import NotificationCenter
 
 class CategoryTableViewController: UITableViewController{
     
@@ -22,6 +22,22 @@ class CategoryTableViewController: UITableViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         getCoreDataInfo()
+        let notif = UNUserNotificationCenter.current();
+        
+        notif.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+                if granted {
+                    print("Yay!")
+                } else {
+                    print("D'oh")
+                }
+            }
+        
+        let content = UNMutableNotificationContent()
+        content.title = "TEST APP!!!!"
+        content.body = "Main text goes here"
+        content.categoryIdentifier = "customIdentifier"
+        content.userInfo = ["customData": "fizzbuzz"]
+        content.sound = UNNotificationSound.default
     }
     // MARK: - Table view data source
     
