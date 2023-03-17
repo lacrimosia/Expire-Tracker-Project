@@ -7,6 +7,7 @@
 
 import UIKit
 import UserNotifications
+import NotificationCenter;
 
 class CategoryTableViewController: UITableViewController{
     
@@ -98,7 +99,7 @@ class CategoryTableViewController: UITableViewController{
                         content.sound = .default
                         
                         let fireDate = Calendar.current.dateComponents([.day, .month, .year, .hour, .minute, .second], from: listDate)
-                        let trigger = UNCalendarNotificationTrigger(dateMatching: fireDate, repeats: false)
+                        let trigger = UNCalendarNotificationTrigger(dateMatching: fireDate, repeats: true)
                         
                         let request = UNNotificationRequest(identifier: "reminder", content: content, trigger: trigger)
                         center.add(request) { (error) in
